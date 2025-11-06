@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="게시글">
+  <title>Post | Dev Blog</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/prism.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="site-header">
+        <a href="index.html" class="site-title">Dev Blog</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 뒤로가기 -->
+        <a href="index.html" class="back-link">← 목록으로</a>
+
+        <!-- 게시글 메타데이터 -->
+        <h1 id="post-title" class="post-title">Loading...</h1>
+        
+        <div class="post-meta">
+          <span id="post-date" class="post-date"></span>
+          <span id="post-category" class="post-category" style="display: none;"></span>
+        </div>
+
+        <div id="post-tags" class="post-tags" style="display: none;"></div>
+
+        <!-- 게시글 본문 -->
+        <div id="post-content" class="post-content">
+          <div class="empty-state">
+            <div class="empty-state-icon">
+              <span class="loading"></span>
+            </div>
+            <p>게시글을 불러오는 중...</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Giscus 댓글 -->
+      <section id="comments" class="comments-section"></section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Dev Blog. Built with ❤️ and GitHub Pages.</p>
+    </footer>
+  </div>
+
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+  
+  <!-- JavaScript -->
+  <script src="js/theme.js"></script>
+  <script src="js/post-loader.js"></script>
+</body>
+</html>
+
